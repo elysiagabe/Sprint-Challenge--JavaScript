@@ -30,13 +30,32 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    .map returns an entirely new array of elements that are the results of calling a provided function on each element in the original array. On the other hand, .forEach executes a provided function on every element of an array but does not return anything (you could, however, push those results into a new array as an example). 
+
 2. What is the difference between a function and a method?
+
+    A method is associated with an object while a function is not. 
 
 3. What is closure?
 
+    A closure is the combination of a function and the lexical environment within which that function is declared. What this means is that every time a function is declared, a new functional scope is created, and the variables or functions declared within that function have the ability to access an outer function’s scope for context (but never the other way around). This will remain true no matter how deeply functions are nested. 
+
 4. Describe the four rules of the 'this' keyword.
 
+    The four rules of ‘this’: 
+
+    1. Global/Window Binding: when invoked in the global/window scope, the value of ‘this’ will refer to the window or console object (which is basically JavaScript). This is basically never going to be your intention and can be avoided by using strict mode. 
+    
+    2. Implicit Binding: when a function is called with a preceding dot, ‘this’ will refer to the object to the left of that dot
+    
+    3. New Binding: when a constructor function is used with the new keyword, ‘this’ will refer to the specific instance of the object that’s created and returned by that constructor function
+    
+    4. Explicit Binding: when the .call, .apply or .bind methods are used, ‘this’ will be explicitly defined at the time of invocation
+
+
 5. Why do we need super() in an extended class?
+
+    super() is what binds the Child class to the Parent and allows it to inherit everything from the Parent. 
 
 ## Project Set up
 
